@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  -->
+  <title>Gửi người tôi yêu</title>  
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<style style="text/css">
+		*{margin:0;padding:0;}
+		body{background:url("1.jpg");background-size:cover;}
+		/*start top*/
+		.top{width:400px;height:100px;margin:60px auto;font-size:30px;font-family:"华文行楷";color:rgb(235, 26, 26);
+		<!--background:-webkit-linear-gradient(45deg,#ff0000,#ffcc00,#ffff99,#33ccff,#00ff33,#6600ff,#333399);
+		-webkit-background-clip:text;-->}
+		/*end top*/
+		/*start box*/
+		.box{width:310px;height:310px;margin:auto;perspective:800px;}
+		.box .pic{position:relative;transform-style:preserve-3d; animation:play 10s linear infinite;}
+		.box ul li{list-style:none;position:absolute;top:0;left:0;}
+		/*start box*/
+			
+		@keyframes play{
+			from{transform:rotateY(0deg);}
+			to{transform:rotateY(360deg);}
+		}
+		/*start text*/
+		#text{width:500px;height:200px;color:#c7f306;margin:auto;font-size:24px;font-family:"方正喵呜体";}
+		/*end text*/
+	</style>
+	
+	<!--<embed src="mai.mp3" height="100px" width="500px" autoplay="true">-->
+<!-- </head> -->
+<!-- </head> -->
+  <script type="text/javascript" charset="utf-8">
+    function hasClassName(inElement, inClassName)
+    {
+        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+        return regExp.test(inElement.className);
+    }
+
+    function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
+
+    function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
+
+    function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
+
+    function toggleShape()
+    {
+      var shape = document.getElementById('shape');
+      if (hasClassName(shape, 'ring')) {
+        removeClassName(shape, 'ring');
+        addClassName(shape, 'cube');
+      } else {
+        removeClassName(shape, 'cube');
+        addClassName(shape, 'ring');
+      }
+      
+      var stage = document.getElementById('stage');
+      if (hasClassName(shape, 'ring'))
+        stage.style.webkitTransform = 'translateZ(-200px)';
+      else
+        stage.style.webkitTransform = '';
+    }
+  </script>
+</head>
+<body>
+  
+  <div style="text-align: center;padding: 15px;"><a href="#" class="classname" onclick="toggleShape()">Mai xinh bấm vào đây này!</a></div>
+  
+  <div id="container">
+    <div id="stage">
+      <div id="shape" class="cube backfaces">
+        <div class="plane one"></div>
+        <div class="plane two"></div>
+        <div class="plane three"></div>
+        <div class="plane four"></div>
+        <div class="plane five"></div>
+        <div class="plane six"></div>
+        <div class="plane seven"></div>
+        <div class="plane eight"></div>
+        <div class="plane nine"></div>
+        <div class="plane ten"></div>
+        <div class="plane eleven"></div>
+        <div class="plane twelve"></div>
+      </div>
+    </div>
+	  <iframe src="https://www.nhaccuatui.com/mh/background/L8VNCeWvU5kx" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  </div> 
+</body>
+</html>
